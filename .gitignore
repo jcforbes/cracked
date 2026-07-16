@@ -1,0 +1,95 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Markdown: only README and docs/ are tracked
+*.md
+!README.md
+!docs/*.md
+docs/gaia_iso_flows.md
+
+# Generated figures and data blobs
+*.png
+*.pdf
+*.pkl
+*.pkl.*
+*.pickle
+*.dill
+*.npz
+*.csv
+*.dat
+*.jl
+*.json
+
+# LaTeX
+*.tex
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Diagnostic text dumps
+*.txt
+
+# Non-package files left in this working dir
+/isostreams.py
+/isostreams_prod.py
+/isostreams_whetu.py
+/isostreams_whetu_github.py
+/adaptive_kde.py
+/rate_sphere_helpers.py
+/nbody.jl
+/stream_kernel.py
+/pytest.ini
+/test_adaptive_kde.py
+/test_rate_sphere_analytic.py
+/test_convergence.py
+/run_multi_seed.py
+
+# Research scripts, not part of the package
+scripts/iso_*.py
+scripts/train_gaia_flow.py
+scripts/export_progenitors.py
+scripts/parametric_stream.py
+scripts/rate_distribution_siblings.py
+scripts/stream_heating_law.py
+scripts/verify_stream_rate.py
+scripts/compare_estimators_rateresults.py
+scripts/_validate_stream_kernel.py
+
+# Research output / data directories
+paper/
+particle_data/
+rateresults/
+roi*_prod/
+bootstrap-scenarios/
+loo-scenarios/
+loo-convergence/
+multi_seed_runs/
+enbid-broken-attempt/
+prev-enbid-fixed/
+prev-with-broken-enbid/
+stream_kernel_handoff/
+
+# External deps (see external/README.md)
+external/Enbid-*/
+external/*.tar.gz
+external/*.zip
+
+# OS / editor
+.DS_Store
+*.swp
+*~

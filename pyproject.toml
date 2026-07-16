@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cracked"
+version = "0.1.0"
+description = "Cross-validated Rate-of-encounter Adaptive Covariance-based Kernel Estimator of Density (6D phase-space adaptive KDE for stream-to-target encounter rates)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "John C. Forbes", email = "johncforbes@gmail.com"}]
+keywords = ["kde", "kernel-density-estimation", "astronomy", "galactic-dynamics", "encounter-rate", "phase-space"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Astronomy",
+]
+
+dependencies = [
+    "numpy>=1.20",
+    "scipy>=1.7",
+    "scikit-learn>=1.0",
+    "tqdm>=4.0",
+]
+
+[project.optional-dependencies]
+tests = ["matplotlib", "pytest"]
+dev   = ["matplotlib", "pytest", "ruff"]
+# Normalizing-flow comparison column in the test scenarios. Not required
+# for core cracked functionality; only needed for the NF baseline.
+nflow = ["torch>=2.0", "nflows>=0.14"]
+
+[project.urls]
+Homepage = "https://github.com/jcforbes/cracked"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]
